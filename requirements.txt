@@ -1,4 +1,3 @@
-argon2-cffi==20.1.0
 asgiref @ file:///tmp/build/80754af9/asgiref_1617740417847/work
 bcrypt @ file:///C:/ci/bcrypt_1607022693089/work
 beautifulsoup4==4.9.3
