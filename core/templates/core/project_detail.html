@@ -1,0 +1,44 @@
+{% extends 'core/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container detail_content">
+    <h5>{{project.title}}</h5>
+    <div class="row detail_body">
+        {% for tag in project.tag.all %}
+        <button class="col-lg-1 btn detail_tags tag">{{tag}}</button>
+        {% endfor %}
+    </div>
+    <div class="row detail_content">
+        {% for image in project.album.full %}
+        <div class="col-vlg-4">
+            <h5>{{image.name}}</h5>
+            <a href="{{image.image.url}}"><img class="project_photo" src="{{image.image.url}}"></a>
+        </div>
+        {% endfor %}
+    </div>
+    {% if project.video %}
+    <div class="text-center">
+        <iframe width="907" height="510" src="{{project.video}}" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div>
+    {% endif %}
+    {% if project.gif %}
+    <img class="container gif" src="{{project.gif}}" border="0"/>
+    {% endif %}
+        {{project.body|safe}}
+    <div class="row">
+        {% if project.githuburl %}
+        <a class="col-lg3 btn my_btn" href="{{project.githuburl}}">
+            {% if project.title == "Robotics Engineering - all of automotive projects" %}
+            Website
+            {% else %}
+            Code
+            {% endif %}
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

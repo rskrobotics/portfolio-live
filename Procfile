@@ -1,0 +1,1 @@
+web: guincorn portfolio.wsgi --log-file -

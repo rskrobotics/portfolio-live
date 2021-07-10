@@ -1,0 +1,47 @@
+{% extends 'core/main.html' %}
+
+{% block content %}
+<section class="projects">
+    <div class="container">
+        {% if project_list %}
+        <div class="row container">
+            {% for project in project_list %}
+            <div class="col-md-4" >
+                <div class="card my_card" style="width: 20rem;">
+                    {% if project.thumbnail %}
+                    <img class="project_thumbnail" src="{{project.thumbnail.url}}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{project.title}}</h5>
+                        <div class="container">
+                            <div class="row">
+                                {% for tag in project.tag.all %}
+                                <button class="btn tag">{{tag}}</button>
+                                {% endfor %}
+                            </div>
+                            <div class="row">
+                                <a class="btn my_btn col" href="{% url 'core:single_project' slug=project.slug %}">
+                                    Details</a>
+                                {% if project.githuburl %}
+                                <a class="btn my_btn col" href="{{project.githuburl}}">
+                                    {% if project.title == "Robotics Engineering - all of automotive projects" %}
+                                    Website
+                                    {% else %}
+                                    Code
+                                    {% endif %}
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <h1>Sorry, no projects here. You are lazy.</h1>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}
