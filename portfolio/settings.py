@@ -22,7 +22,7 @@ TEMPLATE_DIR = BASE_DIR / 'templates'
 SECRET_KEY = os.environ['SECRET_KEY_PORTFOLIO']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
@@ -135,7 +135,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-USE_S3 = True
+USE_S3 = False
 
 if USE_S3:
     # S3 BUCKETS CONFIG

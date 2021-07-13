@@ -99,8 +99,8 @@ font-size: 30px;
 }
 
 .my_logo{
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: auto;
 }
 
 .mugshot{
@@ -188,3 +188,10 @@ height: auto;
 .body_text{
 margin-top: 30em;
 }
+
+.icon {
+padding-left: 2em;
+height: 80px;
+width: auto;
+}
+

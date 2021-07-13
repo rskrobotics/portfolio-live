@@ -10,11 +10,6 @@ def homeView(request):
     return render(request, 'core/home.html')
 
 
-def skillsView(request):
-    '''View for skillsets'''
-    return render(request, 'core/skills.html')
-
-
 class ProjectsView(ListView):
     '''View for projects model'''
     model = Project
