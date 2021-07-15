@@ -81,12 +81,10 @@ body {
 display: grid;
 color: #FFFFFF;
 background-color: #1F2428;
-margin: 5px;
 }
 
 .my_navbar{
 background-color: #2A3035;
-
 }
 
 .my_navbar_ul{
@@ -105,23 +103,21 @@ font-size: 30px;
 
 .mugshot{
     border-radius: 50%;
-    width: 15em;
-    height: 15em;
+    width: 5em;
+    height: 5em;
 }
 
 .introduction--content{
 font-family: 'Roboto', sans-serif;
-  margin-top: 5em;
-  display: grid;
-  grid-template-columns: 1fr 1fr
 }
 
 .introduction-text{
-  margin-top: 1.5em;
+padding: 1.5em;
+
 }
 
 h3 {
-     margin-top :1em;
+margin-top :1em;
 }
 
 .contact{
@@ -190,8 +186,15 @@ margin-top: 30em;
 }
 
 .icon {
-padding-left: 2em;
+margin-left: 1em;
 height: 80px;
 width: auto;
 }
 
+.jumbotron{
+background-color: #202428;
+}
+
+.cnt-jumbo{
+text-align: center;
+}
